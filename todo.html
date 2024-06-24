@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <link rel="stylesheet" href="Todo.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">To-Do list</h1>
+        <h1 class="heading">Today's agenda</h1>
+        <div class="search-box">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <input type="text" class="userInput" placeholder="Enter the task">
+        </div>
+        <div class="allTodos">
+            <!--Insert all todos in this div-->
+            <div class="todo">
+                <input type="checkbox">
+                <div class="item">
+                    <span class="task">Sample Task</span>
+                    <div class="actions">
+                        <i class="fa-solid fa-edit edit-btn"></i>
+                        <i class="fa-solid fa-trash delete-btn"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="others">
+            <span>You have <strong class="task-count">3</strong> tasks</span>   
+            <button class="clear-all-btn">CLEAR ALL</button>
+        </div>
+    </div>
+
+    <script src="Todo.js"></script>
+</body>
+
+</html>

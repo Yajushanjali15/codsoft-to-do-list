@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://wallpaperaccess.com/full/5668713.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  padding: 20px;
+  width: 330px;
+  background: rgba(50, 50, 50, 0.8); /* Semi-transparent background */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  text-align: center;
+}
+
+.container .heading {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container .search-box {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border: 1px solid white;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 7px;
+}
+
+.container .search-box input {
+  all: unset;
+  margin-left: 15px;
+  width: 225px;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+.container .search-box input::placeholder {
+  color: rgb(200, 200, 200); /* Placeholder color */
+}
+
+.container .allTodos {
+  max-height: 330px;
+  width: 100%;
+  margin-top: 20px;
+  overflow-y: auto; /* Scroll if too many tasks */
+}
+
+.container .allTodos .todo {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.container .allTodos .todo input[type="checkbox"] {
+  height: 17px;
+  width: 17px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .allTodos .todo input[type="checkbox"]::before {
+  content: "\2714";
+  font-size: 11px;
+  color: white;
+  visibility: hidden;
+}
+
+.container .allTodos .todo input[type="checkbox"]:checked {
+  background: #926d55;
+  border-color: #7fc1d6;
+}
+
+.container .allTodos .todo input[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+.container .allTodos .item {
+  padding: 1px;
+  border-bottom: 1px solid grey;
+  margin-left: 12px;
+  width: 260px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .allTodos .item .task {
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.container .allTodos .item .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -25px;
+}
+
+.container .allTodos .item .actions i {
+  color: grey;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.container .others {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.container .others span {
+  color: grey;
+  font-size: 13px;
+}
+
+.container .others .clear-all-btn {
+  all: unset;
+  height: 35px;
+  width: 80px;
+  color: white;
+  background: #926d55;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+}
+
+.container .todo .item .task span.checked {
+  text-decoration: line-through;
+}
+
+.no-task-icon {
+  font-size: 80px;
+  color: grey;
+  margin-left: 100px;
+}
+
+::selection {
+  color: rgb(73, 62, 62);
+  background: #926d55;
+}
